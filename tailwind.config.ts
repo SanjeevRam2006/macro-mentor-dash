@@ -47,16 +47,13 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        sidebar: {
-          DEFAULT: "hsl(var(--sidebar-background))",
-          foreground: "hsl(var(--sidebar-foreground))",
-          primary: "hsl(var(--sidebar-primary))",
-          "primary-foreground": "hsl(var(--sidebar-primary-foreground))",
-          accent: "hsl(var(--sidebar-accent))",
-          "accent-foreground": "hsl(var(--sidebar-accent-foreground))",
-          border: "hsl(var(--sidebar-border))",
-          ring: "hsl(var(--sidebar-ring))",
-        },
+      },
+      backgroundImage: {
+        'gradient-neon': 'linear-gradient(135deg, hsl(217 91% 60%), hsl(270 80% 65%))',
+      },
+      boxShadow: {
+        'glow': '0 0 40px hsl(217 91% 60% / 0.3)',
+        'card': '0 8px 32px hsl(220 25% 5% / 0.5)',
       },
       borderRadius: {
         lg: "var(--radius)",

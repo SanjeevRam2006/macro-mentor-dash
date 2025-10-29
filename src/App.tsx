@@ -3,7 +3,13 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Index from "./pages/Index";
+import Navigation from "./components/Navigation";
+import Home from "./pages/Home";
+import Dashboard from "./pages/Dashboard";
+import AICoach from "./pages/AICoach";
+import Progress from "./pages/Progress";
+import FormChecker from "./pages/FormChecker";
+import ProfileSetup from "./pages/ProfileSetup";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -14,9 +20,14 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <Navigation />
         <Routes>
-          <Route path="/" element={<Index />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+          <Route path="/" element={<Home />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/coach" element={<AICoach />} />
+          <Route path="/progress" element={<Progress />} />
+          <Route path="/form-checker" element={<FormChecker />} />
+          <Route path="/profile" element={<ProfileSetup />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
